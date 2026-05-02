@@ -12,19 +12,3 @@ static_sites:
   catchall_document: index.html
   routes:
   - path: /
-  domains:
-  - domain: akashuniversalsolutions.com
-    type: PRIMARY
-  - domain: www.akashuniversalsolutions.com
-    type: ALIAS
-  cors:
-    allow_origins:
-    - exact: https://akashuniversalsolutions.com
-    - exact: https://www.akashuniversalsolutions.com
-    allow_methods:
-    - GET
-    - POST
-    - OPTIONS
-    allow_headers:
-    - Content-Type
-    - Authorization
