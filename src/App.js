@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -17,6 +18,16 @@ function App() {
   const [showAuditModal, setShowAuditModal] = useState(false);
 
   return (
+    <HelmetProvider>
+      <Helmet>
+        {/* Dynamic title & description (overrides index.html defaults) */}
+        <title>Akash Universal Solutions | IT Outsourcing for USA, UK &amp; Europe</title>
+        <meta name="description" content="Akash Universal Solutions – Premium IT outsourcing from India for US, UK & European businesses. Website optimization, business automation, custom app development. Save 60% vs local agencies. Free audit today." />
+        {/* Prevent duplicate indexing */}
+        <link rel="canonical" href="https://www.akashuniversalsolutions.com/" />
+        {/* Page language */}
+        <html lang="en" />
+      </Helmet>
     <div className="min-h-screen bg-brand-dark">
       <Header />
       <main>
@@ -63,6 +74,7 @@ function App() {
         <AuditModal onClose={() => setShowAuditModal(false)} />
       )}
     </div>
+    </HelmetProvider>
   );
 }
 

@@ -1,0 +1,51 @@
+# ═══════════════════════════════════════════════════════
+# Akash Universal Solutions — robots.txt
+# Optimized for Google, Bing, Yahoo, Yandex, Baidu
+# ═══════════════════════════════════════════════════════
+
+# Allow all major search engine bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Allow all others
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# Block non-public paths
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /static/
+
+# Sitemap location
+Sitemap: https://www.akashuniversalsolutions.com/sitemap.xml

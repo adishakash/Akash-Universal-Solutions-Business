@@ -37,8 +37,16 @@ const ExitPopup = ({ onClose }) => {
     onClose && onClose();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const { FORMSPREE_ENDPOINT } = await import("../config/formspree");
+      await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email, _subject: `Exit Popup Lead — ${email}` }),
+      });
+    } catch {}
     setSubmitted(true);
     sessionStorage.setItem("popupDismissed", "true");
     setTimeout(handleClose, 2000);

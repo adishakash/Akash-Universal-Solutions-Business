@@ -10,16 +10,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-blue to-brand-electric flex items-center justify-center text-white font-black text-lg">
-                A
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-black text-white text-sm tracking-tight">AKASH</span>
-                <span className="text-brand-electric text-[10px] font-medium tracking-widest uppercase">
-                  Universal Solutions
-                </span>
-              </div>
+            <div className="mb-4">
+              <a href="#">
+                <div className="inline-block bg-white rounded-xl px-4 py-2">
+                  <img
+                    src="/assets/bb95409e-b957-4bd5-8239-c292ec5304f6-Picsart-BackgroundRemover.png"
+                    alt="Akash Universal Solutions"
+                    className="h-14 w-auto object-contain"
+                  />
+                </div>
+              </a>
             </div>
             <p className="text-brand-gray text-sm leading-relaxed mb-4">
               Premium IT outsourcing for US businesses. We help you grow faster,

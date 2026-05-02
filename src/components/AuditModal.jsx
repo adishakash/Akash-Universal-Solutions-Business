@@ -1,19 +1,34 @@
 import React, { useState } from "react";
+import { FORMSPREE_ENDPOINT } from "../config/formspree";
 
 const AuditModal = ({ onClose }) => {
   const [form, setForm] = useState({ name: "", email: "", website: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError("");
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...form, _subject: `Free Audit Request from ${form.name} — ${form.website}` }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please email adish@akashuniversalsolutions.com directly.");
+      }
+    } catch {
+      setError("Network error. Please try again.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1500);
+    }
   };
 
   return (
@@ -114,6 +129,9 @@ const AuditModal = ({ onClose }) => {
               <p className="text-brand-gray text-xs text-center">
                 Free, no-obligation. We'll respond within 24 hours.
               </p>
+              {error && (
+                <p className="text-red-400 text-xs text-center mt-2">{error}</p>
+              )}
             </form>
           </>
         )}

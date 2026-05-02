@@ -2,22 +2,302 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         FAVICON & THEME
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
     <meta name="theme-color" content="#0A0F1E" />
-    <meta
-      name="description"
-      content="Akash Universal Solutions – IT Outsourcing for US Businesses. Website Optimization, Business Automation, Custom App Development. Save 60% vs US agencies. Get a Free Audit today."
-    />
-    <meta name="keywords" content="IT outsourcing USA, website optimization services, hire developers from India, business automation, custom web development, CRM automation" />
-    <meta property="og:title" content="Akash Universal Solutions | IT Outsourcing for US Businesses" />
-    <meta property="og:description" content="Stop losing customers to a slow website. We help US businesses grow with IT outsourcing from India – 60% cheaper, faster delivery." />
+    <meta name="msapplication-TileColor" content="#0A0F1E" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         PRIMARY SEO
+    ═══════════════════════════════════════════════════════ -->
+    <title>Akash Universal Solutions | IT Outsourcing for USA, UK & Europe</title>
+    <meta name="description" content="Akash Universal Solutions – Premium IT outsourcing from India for US, UK & European businesses. Website optimization, business automation, custom app development. Save 60% vs local agencies. Free audit today." />
+    <meta name="keywords" content="IT outsourcing USA, IT outsourcing UK, IT outsourcing Europe, hire developers from India, website optimization services, business automation USA, custom web development, CRM automation, offshore development company, software development India, digital transformation, web app development USA, mobile app development, SEO services USA, IT support USA, outsource IT services" />
+    <meta name="author" content="Akash Universal Solutions" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://www.akashuniversalsolutions.com/" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         HREFLANG — INTERNATIONAL SEO (USA / UK / EUROPE / INDIA)
+    ═══════════════════════════════════════════════════════ -->
+    <link rel="alternate" hreflang="x-default" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="en-us" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="en-gb" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="en-au" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="en-ca" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="en-in" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="de" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="fr" href="https://www.akashuniversalsolutions.com/" />
+    <link rel="alternate" hreflang="nl" href="https://www.akashuniversalsolutions.com/" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         OPEN GRAPH (Facebook / LinkedIn)
+    ═══════════════════════════════════════════════════════ -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.akashuniversalsolutions.com" />
+    <meta property="og:site_name" content="Akash Universal Solutions" />
+    <meta property="og:title" content="Akash Universal Solutions | IT Outsourcing for USA, UK & Europe" />
+    <meta property="og:description" content="Stop losing customers to a slow website. We help US, UK & European businesses grow with expert IT outsourcing from India – 60% cheaper, faster delivery, proven results." />
+    <meta property="og:url" content="https://www.akashuniversalsolutions.com/" />
+    <meta property="og:image" content="https://www.akashuniversalsolutions.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Akash Universal Solutions – IT Outsourcing for US & European Businesses" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_IN" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AkashUniversalS" />
+    <meta name="twitter:creator" content="@AkashUniversalS" />
+    <meta name="twitter:title" content="IT Outsourcing for USA, UK & Europe | Akash Universal Solutions" />
+    <meta name="twitter:description" content="Website optimization, business automation & custom app development from India. Save 60% vs US/UK agencies. Free audit – results in 30 days." />
+    <meta name="twitter:image" content="https://www.akashuniversalsolutions.com/assets/og-image.png" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         GEO TARGETING (USA / UK / EUROPE / INDIA)
+    ═══════════════════════════════════════════════════════ -->
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+    <meta name="ICBM" content="37.09024, -95.712891" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         JSON-LD STRUCTURED DATA
+    ═══════════════════════════════════════════════════════ -->
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Akash Universal Solutions",
+      "alternateName": "AUS",
+      "url": "https://www.akashuniversalsolutions.com",
+      "logo": "https://www.akashuniversalsolutions.com/assets/bb95409e-b957-4bd5-8239-c292ec5304f6-Picsart-BackgroundRemover.png",
+      "description": "Premium IT outsourcing company from India serving US, UK and European businesses. Specializing in website optimization, business automation, custom web and mobile app development.",
+      "foundingDate": "2020",
+      "slogan": "Technology | Automation | Growth",
+      "email": "hello@akashuniversalsolutions.com",
+      "telephone": "+1-555-000-0000",
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Canada" },
+        { "@type": "Country", "name": "Australia" },
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Netherlands" },
+        { "@type": "Country", "name": "India" }
+      ],
+      "knowsAbout": [
+        "IT Outsourcing", "Website Optimization", "Business Automation",
+        "Custom Web Development", "Mobile App Development", "CRM Setup",
+        "SEO Services", "Data Analytics", "Digital Transformation"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/akashuniversalsolutions",
+        "https://twitter.com/AkashUniversalS",
+        "https://www.facebook.com/akashuniversalsolutions"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-555-000-0000",
+          "contactType": "sales",
+          "areaServed": ["US", "GB", "CA", "AU"],
+          "availableLanguage": ["English"],
+          "contactOption": "TollFree"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-99999-99999",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Professional Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Akash Universal Solutions",
+      "url": "https://www.akashuniversalsolutions.com",
+      "image": "https://www.akashuniversalsolutions.com/assets/og-image.png",
+      "description": "IT outsourcing company specializing in website optimization, business automation, custom app development and data analytics for US, UK and European SMBs.",
+      "priceRange": "$799 - $4999/month",
+      "currenciesAccepted": "USD, GBP, EUR",
+      "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Optimization",
+              "description": "Speed, mobile, and conversion rate optimization for US and UK business websites."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Automation",
+              "description": "CRM setup, chatbots, and workflow automation to save time and increase revenue."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Web & Mobile App Development",
+              "description": "Scalable custom web and mobile applications built for US and European businesses."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data Dashboards & Analytics",
+              "description": "Real-time business intelligence dashboards and KPI tracking for data-driven decisions."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Monthly Maintenance & Support",
+              "description": "Ongoing website maintenance, security updates, and dedicated technical support."
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- Website Schema with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Akash Universal Solutions",
+      "url": "https://www.akashuniversalsolutions.com",
+      "description": "IT outsourcing for US, UK and European businesses — website optimization, automation, custom development.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.akashuniversalsolutions.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema (targets featured snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does IT outsourcing to India cost for US businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT outsourcing to India typically costs 60-80% less than hiring US-based agencies or developers. Akash Universal Solutions offers monthly plans from $799/month, compared to $3,000-$8,000/month for equivalent US agencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I hire Indian developers who work US business hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Akash Universal Solutions operates during US EST and PST business hours, communicates via Slack, Zoom, and email, and provides dedicated account managers for all clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you improve my website speed and conversions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most website optimization projects see measurable results within 30 days. Our clients typically experience 30-40% improvement in page load speed and a 20-35% lift in conversions within the first 90 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with UK and European businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Akash Universal Solutions serves businesses across the US, UK, Germany, France, Netherlands, Canada, and Australia. We support multiple time zones and currencies including USD, GBP, and EUR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the free website audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our free audit covers page speed and Core Web Vitals, SEO health and keyword rankings, mobile responsiveness, conversion rate analysis, and a prioritized action plan with estimated revenue impact."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.akashuniversalsolutions.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.akashuniversalsolutions.com/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Case Studies", "item": "https://www.akashuniversalsolutions.com/#case-studies" },
+        { "@type": "ListItem", "position": 4, "name": "Pricing", "item": "https://www.akashuniversalsolutions.com/#pricing" },
+        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.akashuniversalsolutions.com/#contact" }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PERFORMANCE — PRECONNECT & FONTS
+    ═══════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <title>Akash Universal Solutions | IT Outsourcing for US Businesses</title>
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

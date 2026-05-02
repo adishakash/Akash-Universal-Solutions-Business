@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "../hooks/useInView";
+import { FORMSPREE_ENDPOINT } from "../config/formspree";
 
 const Contact = () => {
   const { ref, inView } = useInView();
@@ -12,18 +13,32 @@ const Contact = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError("");
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...form, _subject: `New contact from ${form.name} — ${form.business}` }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please email us directly at adish@akashuniversalsolutions.com");
+      }
+    } catch {
+      setError("Network error. Please try again or email us directly.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1500);
+    }
   };
 
   return (
@@ -103,7 +118,7 @@ const Contact = () => {
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-green-500/40 transition-colors">
                   💬
                 </div>
-                <span>WhatsApp: +1 (555) 000-0000</span>
+                <span>WhatsApp: +91-9186028356</span>
               </a>
               <div className="flex items-center gap-3 text-brand-gray">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
@@ -231,6 +246,9 @@ const Contact = () => {
                   <p className="text-brand-gray text-xs text-center">
                     100% free. No spam. We'll respond within 24 hours.
                   </p>
+                  {error && (
+                    <p className="text-red-400 text-xs text-center mt-2">{error}</p>
+                  )}
                 </form>
               </>
             )}

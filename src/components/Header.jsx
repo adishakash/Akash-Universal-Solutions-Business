@@ -30,17 +30,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-blue to-brand-electric flex items-center justify-center text-white font-black text-lg">
-              A
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-black text-white text-sm md:text-base tracking-tight">
-                AKASH
-              </span>
-              <span className="text-brand-electric text-[10px] md:text-xs font-medium tracking-widest uppercase">
-                Universal Solutions
-              </span>
+          <a href="#" className="flex items-center">
+            <div className="bg-white rounded-xl px-3 py-1.5">
+              <img
+                src="/assets/bb95409e-b957-4bd5-8239-c292ec5304f6-Picsart-BackgroundRemover.png"
+                alt="Akash Universal Solutions"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </div>
           </a>
 
