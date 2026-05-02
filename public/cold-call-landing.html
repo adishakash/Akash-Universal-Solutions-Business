@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Akash Universal Solutions – We Fix Slow Websites & Business Tech Problems for US Businesses. Free audit, fast results, 60% cheaper than US agencies."/>
+  <title>Free Website Audit | Akash Universal Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark: #0A0F1E;
+      --navy: #0D1B3E;
+      --blue: #1A6BFF;
+      --electric: #00C2FF;
+      --orange: #FF6B35;
+      --gray: #8892A4;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    .lp-header { padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); max-width: 1200px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--blue), var(--electric)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; }
+    .logo-text { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--electric); }
+    .phone-link { background: var(--blue); color: #fff; font-weight: 700; padding: 10px 24px; border-radius: 10px; font-size: 14px; }
+
+    /* Hero */
+    .lp-hero { max-width: 900px; margin: 0 auto; padding: 60px 24px 40px; text-align: center; }
+    .lp-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.35); color: var(--orange); font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 30px; margin-bottom: 28px; }
+    .lp-hero h1 { font-size: clamp(32px, 5vw, 60px); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .gradient { background: linear-gradient(90deg, var(--electric), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .lp-hero p { font-size: 18px; color: var(--gray); line-height: 1.7; max-width: 700px; margin: 0 auto 36px; }
+
+    /* Form box */
+    .form-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; padding: 40px; max-width: 540px; margin: 0 auto 60px; }
+    .form-box h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .form-box p { color: var(--gray); font-size: 14px; margin-bottom: 24px; }
+    .form-row { margin-bottom: 16px; }
+    .form-row label { display: block; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-row input, .form-row select { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 12px 16px; color: #fff; font-family: inherit; font-size: 15px; outline: none; transition: border-color 0.2s; }
+    .form-row input:focus, .form-row select:focus { border-color: var(--blue); }
+    .form-row input::placeholder { color: var(--gray); }
+    .form-row select { color: var(--gray); }
+    .form-row select option { background: var(--dark); }
+    .btn-submit { width: 100%; background: var(--orange); color: #fff; font-weight: 800; font-size: 18px; padding: 16px; border: none; border-radius: 14px; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 8px; }
+    .btn-submit:hover { background: #e55a25; transform: translateY(-1px); }
+    .form-disclaimer { color: var(--gray); font-size: 12px; text-align: center; margin-top: 12px; }
+
+    /* Trust row */
+    .trust-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 32px; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .trust-item { display: flex; align-items: center; gap: 6px; color: var(--gray); font-size: 14px; }
+
+    /* What you get */
+    .what-section { max-width: 800px; margin: 0 auto 60px; padding: 0 24px; }
+    .what-section h3 { font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 32px; }
+    .what-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .what-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; }
+    .what-card .icon { font-size: 28px; margin-bottom: 10px; }
+    .what-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .what-card p { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+    /* Results */
+    .results-section { background: rgba(26,107,255,0.08); border-top: 1px solid rgba(26,107,255,0.2); border-bottom: 1px solid rgba(26,107,255,0.2); padding: 50px 24px; margin-bottom: 60px; }
+    .results-inner { max-width: 900px; margin: 0 auto; }
+    .results-inner h3 { font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 32px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .result-item { text-align: center; padding: 24px; background: rgba(255,255,255,0.04); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+    .result-num { font-size: 42px; font-weight: 900; background: linear-gradient(90deg, var(--electric), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .result-label { font-size: 13px; color: var(--gray); margin-top: 4px; }
+
+    /* Testimonial */
+    .testimonial-section { max-width: 700px; margin: 0 auto 60px; padding: 0 24px; }
+    .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 28px; }
+    .stars { color: #FBBF24; font-size: 18px; margin-bottom: 12px; }
+    .testimonial-card blockquote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { font-weight: 700; color: #fff; }
+    .testimonial-role { font-size: 13px; color: var(--gray); }
+
+    /* Footer */
+    .lp-footer { text-align: center; padding: 24px; border-top: 1px solid rgba(255,255,255,0.08); color: var(--gray); font-size: 13px; }
+
+    /* Success screen */
+    #success-screen { display: none; text-align: center; padding: 40px 20px; }
+    #success-screen h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    #success-screen p { color: var(--gray); line-height: 1.6; }
+
+    @media (max-width: 600px) {
+      .lp-header { flex-direction: column; gap: 12px; }
+      .form-box { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="lp-header">
+      <div class="logo">
+        <div class="logo-icon">A</div>
+        <div>
+          <div style="font-weight:900;font-size:14px;letter-spacing:1px;">AKASH UNIVERSAL SOLUTIONS</div>
+          <div class="logo-text">IT Outsourcing for US Businesses</div>
+        </div>
+      </div>
+      <a href="tel:+15550000000" class="phone-link">📞 Call Us: (555) 000-0000</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="lp-hero">
+    <div class="lp-badge">
+      <span style="width:8px;height:8px;background:var(--orange);border-radius:50%;display:inline-block;"></span>
+      Limited Spots Available This Month
+    </div>
+    <h1>
+      Is Your Website Costing You<br/>
+      <span class="gradient">Customers Every Day?</span>
+    </h1>
+    <p>
+      Get a <strong style="color:#fff;">100% FREE</strong> professional website audit — we'll show you exactly
+      where you're losing leads and how to fix it. US businesses trust us for fast,
+      affordable IT solutions that actually work.
+    </p>
+  </section>
+
+  <!-- Form -->
+  <div class="form-box" id="form-container">
+    <h2>🔍 Claim Your Free Website Audit</h2>
+    <p>Takes 60 seconds. We'll deliver your full report within 24 hours.</p>
+    <form id="lp-form">
+      <div class="form-row">
+        <label>Your Name *</label>
+        <input type="text" name="name" placeholder="John Smith" required/>
+      </div>
+      <div class="form-row">
+        <label>Business Email *</label>
+        <input type="email" name="email" placeholder="you@yourbusiness.com" required/>
+      </div>
+      <div class="form-row">
+        <label>Your Website URL *</label>
+        <input type="url" name="website" placeholder="https://yourbusiness.com" required/>
+      </div>
+      <div class="form-row">
+        <label>Your Industry</label>
+        <select name="industry">
+          <option value="">Select your industry...</option>
+          <option>Home Services (HVAC, Plumbing, etc.)</option>
+          <option>Real Estate</option>
+          <option>Legal / Law Firm</option>
+          <option>Healthcare / Medical</option>
+          <option>E-Commerce / Retail</option>
+          <option>Restaurant / Food</option>
+          <option>Professional Services</option>
+          <option>SaaS / Tech</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">🚀 Get My Free Audit Now</button>
+      <p class="form-disclaimer">✅ 100% Free &nbsp;|&nbsp; No Credit Card &nbsp;|&nbsp; No Sales Pressure</p>
+    </form>
+    <div id="success-screen">
+      <div style="font-size:60px;margin-bottom:16px;">🎉</div>
+      <h2>You're All Set!</h2>
+      <p>Your free audit is confirmed. We'll deliver your complete website analysis within <strong style="color:#fff;">24 hours</strong>. Check your inbox for a confirmation email.</p>
+    </div>
+  </div>
+
+  <!-- Trust row -->
+  <div class="trust-row">
+    <div class="trust-item">✅ 150+ US Clients</div>
+    <div class="trust-item">⚡ Results in 30 Days</div>
+    <div class="trust-item">💰 Save 60% vs US Agencies</div>
+    <div class="trust-item">🔒 NDA Protected</div>
+    <div class="trust-item">🇺🇸 US Business Hours</div>
+  </div>
+
+  <!-- What you get -->
+  <section class="what-section">
+    <h3>What's Included in Your <span class="gradient">Free Audit?</span></h3>
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="icon">⚡</div>
+        <h4>Speed Analysis</h4>
+        <p>We test your page load speed and Core Web Vitals — and show you exactly what's slowing you down.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">🔍</div>
+        <h4>SEO Health Check</h4>
+        <p>See how you rank vs competitors and which keywords are driving (or not driving) traffic.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">📱</div>
+        <h4>Mobile Review</h4>
+        <p>Is your site losing 70% of visitors on mobile? We'll identify every broken experience.</p>
+      </div>
+      <div class="what-card">
+        <div class="icon">📋</div>
+        <h4>Action Plan</h4>
+        <p>You get a prioritized list of fixes ranked by revenue impact — so you know exactly what to do first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results-section">
+    <div class="results-inner">
+      <h3>Real Results We've Delivered</h3>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-num">+287%</div>
+          <div class="result-label">More leads for an HVAC company</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">1.8s</div>
+          <div class="result-label">Page load time (from 8 seconds)</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">60%</div>
+          <div class="result-label">Cost savings vs US agencies</div>
+        </div>
+        <div class="result-item">
+          <div class="result-num">$180k</div>
+          <div class="result-label">Saved on custom app vs US quote</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>
+        "I was skeptical at first — outsourcing to India seemed risky. But Akash's team blew us away. They work US hours, communicate perfectly, and delivered better than any local agency we'd used before. Our site now loads in under 2 seconds and we're getting 3x more calls."
+      </blockquote>
+      <div class="testimonial-author">Jennifer M.</div>
+      <div class="testimonial-role">Owner, Bright Smile Dentistry – Austin, TX</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="lp-footer">
+    <p>© 2025 Akash Universal Solutions &nbsp;|&nbsp; <a href="mailto:adish@akashuniversalsolutions.com" style="color:var(--electric);">adish@akashuniversalsolutions.com</a> &nbsp;|&nbsp; <a href="https://www.akashuniversalsolutions.com" style="color:var(--electric);">www.akashuniversalsolutions.com</a></p>
+    <p style="margin-top:8px;"><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('lp-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // In production, send form data to your backend/CRM here
+      document.getElementById('lp-form').style.display = 'none';
+      document.getElementById('success-screen').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

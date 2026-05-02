@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-dark text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-blue-500/25 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-white/20 hover:border-brand-blue text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-brand-blue/10 hover:-translate-y-0.5;
+  }
+
+  .btn-orange {
+    @apply inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-orange-500/25 hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-brand-gray text-lg md:text-xl leading-relaxed;
+  }
+
+  .card {
+    @apply bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-brand-blue/50 transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-electric to-brand-blue bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A6BFF;
+  border-radius: 3px;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(26, 107, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 107, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(26, 107, 255, 0.3);
+}
+
+.glow-card:hover {
+  box-shadow: 0 20px 60px rgba(26, 107, 255, 0.15);
+}
+
+/* Animation utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gradient overlays */
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(26, 107, 255, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 40% at 80% 60%, rgba(0, 194, 255, 0.08) 0%, transparent 50%);
+}
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 text-brand-electric text-sm font-medium px-4 py-1.5 rounded-full;
+}
+
+/* Input styles */
+.form-input {
+    @apply w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-brand-gray focus:outline-none focus:border-brand-blue transition-all duration-200;
+}
+
+/* Floating button */
+.float-cta {
+  animation: float 3s ease-in-out infinite, pulse2 2s ease-in-out infinite;
+}
+
+/* Step connector */
+.step-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #1A6BFF, transparent);
+  transform: translateY(-50%);
+}
